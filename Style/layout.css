@@ -1,0 +1,321 @@
+/* Layout & Reset */
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  color: white;
+  background: #35363a;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-template-rows: auto 1fr auto;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/Style/Images/bmw.png");
+}
+
+a {
+  color: white;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+select {
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+button {
+  -webkit-appearance: none;
+}
+/* Navigation */
+
+header {
+  padding: 1.5rem;
+}
+.navigation {
+  margin: 0 auto;
+  display: flex;
+  max-width: 1400px;
+  align-items: center;
+  justify-content: space-between;
+  text-shadow: -5px 1px 5px #000000;
+}
+.logo {
+  font-size: 3rem;
+}
+.logo a {
+  text-shadow: -5px 1px 5px #000000;
+}
+.logo a:hover {
+  border-bottom: 1px solid #da5729;
+}
+/* Main Content */
+
+/* Landing Section */
+/* Hero */
+.landingSection {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.hero {
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-shadow: -5px 1px 5px #000000;
+}
+.heroHeading {
+  font-size: 4rem;
+}
+.heroText {
+  font-size: 2rem;
+  margin-top: 20px;
+}
+/* Lead */
+.leadBox {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+}
+.lead {
+  padding: 2rem;
+  color: black;
+  border-radius: 5px;
+  height: fit-content;
+  background: #da5729;
+}
+.lead > * {
+  margin: 5% 0;
+}
+.leadForm > div {
+  display: flex;
+  margin: 10px 0;
+  flex-direction: column;
+}
+.leadForm > div > input {
+  border: none;
+  padding: 10px;
+  outline: none;
+  border-radius: 5px;
+}
+.leadText {
+  font-size: 2rem;
+}
+
+.leadBtn {
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+  padding: 3px 15px;
+  text-align: center;
+  border-radius: 5px;
+  background: black;
+  border: 1px solid black;
+}
+
+.leadTextBottom {
+  text-align: center;
+}
+/* Quote Form */
+
+.quoteForm {
+  padding: 1rem;
+  display: none;
+}
+.quoteContainer {
+  gap: 20px;
+  display: flex;
+}
+.quoteFields {
+  display: flex;
+  border-radius: 5px;
+  background: #da5729;
+  flex-direction: column;
+}
+.quoteHeading {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: -5px 1px 5px #000000;
+}
+.quoteText {
+  margin-bottom: 20px;
+}
+.quoteSubtext {
+  text-align: center;
+  text-shadow: -5px 1px 5px #000000;
+}
+.quoteFormFields {
+  gap: 5%;
+  padding: 1rem;
+  display: flex;
+  color: #000000;
+  border-radius: 5px;
+  background: #da5729;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.quoteBtn {
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 5px 15px;
+  border-radius: 5px;
+  width: fit-content;
+  background: black;
+}
+.left,
+.right {
+  width: 50%;
+}
+.left > *,
+.right > * {
+  display: flex;
+  margin: 10px 0;
+  flex-direction: column;
+}
+
+.left > div > input,
+.right > div > input {
+  border: none;
+  padding: 10px;
+  outline: none;
+  border-radius: 5px;
+}
+.left > div > select,
+.right > div > select {
+  border: none;
+  padding: 10px;
+  outline: none;
+  border-radius: 5px;
+}
+select {
+  background: white;
+}
+.dateOfBirth,
+.lastInsuredDate {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+}
+.dobMonth,
+.month {
+  margin: 0 10px;
+}
+.dateOfBirth > select,
+.lastInsuredDate > select {
+  flex: 1;
+  gap: 10px;
+  border: none;
+  padding: 10px;
+  outline: none;
+  border-radius: 5px;
+  background: white;
+}
+
+/* Footer */
+
+footer {
+  padding: 1.5rem;
+  text-align: center;
+}
+.footerLink {
+  border-bottom: 1px solid #da5729;
+}
+
+/* Mobile Style */
+
+@media (max-width: 800px) {
+  body {
+    height: auto;
+  }
+  /* Navigation */
+  header {
+    padding: 1rem;
+  }
+
+  .navigation {
+    justify-content: center;
+  }
+  .subLogo {
+    display: none;
+  }
+
+  /* Main Content */
+
+  main {
+    width: 100%;
+  }
+
+  /* Landing Section */
+
+  .landingSection {
+    padding: 1rem;
+    display: block;
+  }
+  .heroHeading {
+    font-size: 2rem;
+  }
+  .heroText {
+    font-size: 1.5rem;
+  }
+  .hero,
+  .leadBox {
+    padding: 0;
+  }
+
+  .hero {
+    width: auto;
+    text-align: center;
+    margin-bottom: 10%;
+  }
+  .leadBox {
+    justify-content: center;
+  }
+  /* Quote Form */
+  .quoteFormFields {
+    flex-direction: column;
+  }
+  .quoteContainer {
+    flex-direction: column;
+    gap: 0;
+  }
+  .left,
+  .right {
+    width: 100%;
+  }
+  /* Footer */
+}
+
+@media (min-width: 1250px) {
+  main {
+    width: 70%;
+    margin: auto;
+  }
+}
+
+.lastInsured {
+  display: none;
+}
+.currentProvider {
+  display: none;
+}

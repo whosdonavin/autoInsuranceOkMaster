@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Oswald", sans-serif;
+}
+
+main {
+  display: flex;
+  padding: 0 20px;
+  color: #000000;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+body {
+  height: 100vh;
+  display: grid;
+  color: white;
+  background: #35363a;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "Oswald", sans-serif;
+  grid-template-rows: auto 1fr auto;
+  background-image: url("/Style/Images/sky.jpeg");
+}
+a {
+  color: white;
+}
+header {
+  padding: 1.5rem;
+}
+.navigation {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1400px;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  font-size: 3rem;
+}
+
+.logo a:hover {
+  border-bottom: 1px solid #da5729;
+}
+.thankYou {
+  font-size: 3rem;
+}
+footer {
+  padding: 1.5rem;
+  text-align: center;
+}
+.footerLink {
+  border-bottom: 1px solid #da5729;
+}
+@media (max-width: 800px) {
+  body {
+    background-size: auto;
+  }
+  .subLogo {
+    display: none;
+  }
+  .navigation {
+    justify-content: center;
+  }
+} ;
